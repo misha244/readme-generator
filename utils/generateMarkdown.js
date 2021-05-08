@@ -47,17 +47,21 @@ const generateMarkdown = (answers) => {
   const {
     title,
     description,
-    installation,
     installationGuidelines,
-    contribution,
     contributionGuidelines,
+    testingGuidelines,
+    license,
+    github,
+    email,
   } = answers;
 
-  return `# ${data.title}
+  return `# ${title}
 
   ${licenseBadge}
 
   ## Description
+
+  ${description}
 
   ## Table of Contents
   - [Description](#description)
@@ -68,17 +72,25 @@ const generateMarkdown = (answers) => {
   - [Tests](#tests)
   - [Questions](#questions)
 
-  ## Description
-
   ## Installation
+
+  ${installationGuidelines}
 
   ## Usage
 
+  ${usage}
+
   ## License
+
+  ${license}
 
   ## Contributing
 
+  ${contributionGuidelines}
+
   ## Tests
+
+  ${testingGuidelines}
 
   ## Questions
 
