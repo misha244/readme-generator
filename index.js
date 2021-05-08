@@ -27,6 +27,11 @@ const init = async () => {
       name: "description",
     },
     {
+      type: "input",
+      message: "Please give information on the usage for your project",
+      name: "usage",
+    },
+    {
       type: "confirm",
       message:
         "Do you wish to add any installation guidelines for your project? (it's gonna be y/n)",
