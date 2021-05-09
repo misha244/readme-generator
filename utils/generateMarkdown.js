@@ -46,21 +46,21 @@ const renderInstallationSection = (installationGuidelines) => {
   if (installationGuidelines) {
     return `${installationGuidelines}`;
   } else {
-    return "";
+    return "Not available";
   }
 };
 const renderContributingSection = (contributionGuidelines) => {
   if (contributionGuidelines) {
     return `${contributionGuidelines}`;
   } else {
-    return "";
+    return "Not available";
   }
 };
 const renderTestsSection = (testingGuidelines) => {
   if (testingGuidelines) {
     return `${testingGuidelines}`;
   } else {
-    return "";
+    return "Not available";
   }
 };
 
