@@ -14,28 +14,28 @@ const init = async () => {
   const questions = [
     {
       type: "input",
-      message: "What is the title of your project",
+      message: "What is the title of your project?",
       name: "title",
     },
     {
       type: "input",
-      message: "What is your project about? Please give a brief description",
+      message: "What is your project about? Please give a brief description: ",
       name: "description",
     },
     {
       type: "input",
-      message: "Please give information on the usage for your project",
+      message: "Please give information on the usage for your project: ",
       name: "usage",
     },
     {
       type: "confirm",
       message:
-        "Do you wish to add any installation guidelines for your project? (it's gonna be y/n)",
+        "Do you wish to add any installation guidelines for your project?",
       name: "installation",
     },
     {
       type: "input",
-      message: "Please enter your installation guidelines",
+      message: "Please enter your installation guidelines: ",
       name: "installationGuidelines",
       when: (answers) => {
         return answers.installation;
@@ -49,7 +49,7 @@ const init = async () => {
     },
     {
       type: "input",
-      message: "Please enter your contribution guidelines",
+      message: "Please enter your contribution guidelines: ",
       name: "contributionGuidelines",
       when: (answers) => {
         return answers.contribution;
@@ -62,7 +62,7 @@ const init = async () => {
     },
     {
       type: "input",
-      message: "Please enter your testing guidelines",
+      message: "Please enter your testing guidelines: ",
       name: "testingGuidelines",
       when: (answers) => {
         return answers.testing;
@@ -76,18 +76,18 @@ const init = async () => {
     },
     {
       type: "input",
-      message: "Please provide your GitHub username",
+      message: "Please provide your GitHub username: ",
       name: "github",
     },
     {
       type: "input",
-      message: "Please provide your email address",
+      message: "Please provide your email address: ",
       name: "email",
     },
     {
       type: "input",
       message:
-        "What name do you wish to give your README file. Don't include the .md extension ",
+        "What name do you wish to give your README file? Don't include the .md extension. ",
       name: "readme",
       default: "GENERATED_README",
     },
