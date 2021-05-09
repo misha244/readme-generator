@@ -42,22 +42,22 @@ const renderLicenseSection = (license) => {
   }
 };
 
-const renderInstallationSection = (installation) => {
-  if (installation) {
+const renderInstallationSection = (installationGuidelines) => {
+  if (installationGuidelines) {
     return `${installationGuidelines}`;
   } else {
     return "";
   }
 };
-const renderContributingSection = (contribution) => {
-  if (contribution) {
+const renderContributingSection = (contributionGuidelines) => {
+  if (contributionGuidelines) {
     return `${contributionGuidelines}`;
   } else {
     return "";
   }
 };
-const renderTestsSection = (testing) => {
-  if (testing) {
+const renderTestsSection = (testingGuidelines) => {
+  if (testingGuidelines) {
     return `${testingGuidelines}`;
   } else {
     return "";
@@ -80,9 +80,9 @@ const generateMarkdown = (answers) => {
 
   const licenseBadge = renderLicenseBadge(license);
   const licenseSection = renderLicenseSection(license);
-  const installationSection = renderInstallationSection(installation);
-  const contributingSection = renderContributingSection(contribution);
-  const testsSection = renderTestsSection(testing);
+  const installationSection = renderInstallationSection(installationGuidelines);
+  const contributingSection = renderContributingSection(contributionGuidelines);
+  const testsSection = renderTestsSection(testingGuidelines);
 
   return `# ${title} 
   
