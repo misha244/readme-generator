@@ -33,7 +33,9 @@ const renderLicenseLink = (license) => {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 const renderLicenseSection = (license) => {
-  if (license !== "None") {
+  if (license === "None") {
+    return "";
+  } else {
     return `This project is licensed under the ${license} license.
     Find out more about it [here](${licenseLink})`;
   }
@@ -84,6 +86,8 @@ const generateMarkdown = (answers) => {
   ## License
 
   ${license}
+  ${licenseSection}
+  ${licenseLink}
 
   ## Contributing
 
