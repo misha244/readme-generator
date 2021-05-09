@@ -124,7 +124,7 @@ const generateMarkdown = (answers) => {
 
   ## Questions
 
-  If you have any questions, please get in touch with me throught my [Github](https://www.github.com/${github}) or [email](mailto:${email})!
+  If you have any questions, please get in touch with me through my [Github](https://www.github.com/${github}) or [email](mailto:${email})!
 
   ## Fin.`;
 };
