@@ -59,7 +59,9 @@ const generateMarkdown = (answers) => {
   const licenseBadge = renderLicenseBadge(license);
   const licenseSection = renderLicenseSection(license);
 
-  return `# ${title} ${licenseBadge}
+  return `# ${title} 
+  
+  ${licenseBadge}
 
 
   ## Description
@@ -77,11 +79,12 @@ const generateMarkdown = (answers) => {
 
   ## Installation
 
-  ${installationGuidelines}
-
+  
+  \`\`\` ${installationGuidelines} \`\`\`
+  
   ## Usage
 
-  ${usage}
+  \`\`\` ${usage} \`\`\`
 
   ## License
 
@@ -98,6 +101,8 @@ const generateMarkdown = (answers) => {
   ## Questions
 
   If you have any questions, please get in touch with me throught my [Github](https://www.github.com/${github}) or [email](mailto:${email})!
+
+  ## Fin.
 
 `;
 };
