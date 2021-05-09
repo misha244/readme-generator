@@ -85,7 +85,9 @@ const init = async () => {
   ];
   const answers = await getAnswersFromQuestions(questions);
 
-  writeToFile(answers.readme, generateMarkdown);
+  const generatedMarkdown = generateMarkdown(answers);
+
+  writeToFile(answers.readme, generatedMarkdown);
 };
 
 // Function call to initialize app
