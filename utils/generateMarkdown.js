@@ -42,6 +42,28 @@ const renderLicenseSection = (license) => {
   }
 };
 
+const renderInstallationSection = (installation) => {
+  if (installation) {
+    return `${installationGuidelines}`;
+  } else {
+    return "";
+  }
+};
+const renderContributingSection = (contribution) => {
+  if (contribution) {
+    return `${contributionGuidelines}`;
+  } else {
+    return "";
+  }
+};
+const renderTestsSection = (testing) => {
+  if (testing) {
+    return `${testingGuidelines}`;
+  } else {
+    return "";
+  }
+};
+
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = (answers) => {
   const {
@@ -58,6 +80,9 @@ const generateMarkdown = (answers) => {
 
   const licenseBadge = renderLicenseBadge(license);
   const licenseSection = renderLicenseSection(license);
+  const installationSection = renderInstallationSection(installation);
+  const contributingSection = renderContributingSection(contribution);
+  const testsSection = renderTestsSection(testing);
 
   return `# ${title} 
   
@@ -79,8 +104,7 @@ const generateMarkdown = (answers) => {
 
   ## Installation
 
-  
-  \`\`\` ${installationGuidelines} \`\`\`
+  \`\`\` ${installationSection} \`\`\`
   
   ## Usage
 
@@ -92,19 +116,17 @@ const generateMarkdown = (answers) => {
 
   ## Contributing
 
-  ${contributionGuidelines}
+  ${contributingSection}
 
   ## Tests
 
-  ${testingGuidelines}
+  ${testsSection}
 
   ## Questions
 
   If you have any questions, please get in touch with me throught my [Github](https://www.github.com/${github}) or [email](mailto:${email})!
 
-  ## Fin.
-
-`;
+  ## Fin.`;
 };
 
 module.exports = generateMarkdown;
