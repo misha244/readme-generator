@@ -37,6 +37,9 @@ const init = async () => {
       type: "input",
       message: "Please enter your installation guidelines",
       name: "installationGuidelines",
+      when: (answers) => {
+        return answers.installation;
+      },
     },
     {
       type: "confirm",
@@ -48,6 +51,9 @@ const init = async () => {
       type: "input",
       message: "Please enter your contribution guidelines",
       name: "contributionGuidelines",
+      when: (answers) => {
+        return answers.contribution;
+      },
     },
     {
       type: "confirm",
@@ -58,6 +64,9 @@ const init = async () => {
       type: "input",
       message: "Please enter your testing guidelines",
       name: "testingGuidelines",
+      when: (answers) => {
+        return answers.testing;
+      },
     },
     {
       type: "list",
