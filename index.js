@@ -3,10 +3,6 @@ const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 const writeToFile = require("./utils/writeToFile");
 
-const handleAnswers = (answers) => {
-  console.log(answers);
-};
-
 const getAnswersFromQuestions = async (questions) => {
   const answers = await inquirer.prompt(questions);
   return answers;
@@ -79,9 +75,15 @@ const init = async () => {
       message: "Please provide your email address",
       name: "email",
     },
+    {
+      type: "input",
+      message:
+        "What name do you wish to give your README file. Don't include the .md extension ",
+      name: "readme",
+      default: "GENERATED_README",
+    },
   ];
   const answers = await getAnswersFromQuestions(questions);
-  handleAnswers(answers);
 
   writeToFile(answers.readme, generateMarkdown);
 };
