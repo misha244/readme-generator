@@ -38,9 +38,6 @@ const renderLicenseSection = (license) => {
     Find out more about it [here](${licenseLink})`;
   }
 };
-const licenseBadge = renderLicenseBadge(license);
-const licenseSection = renderLicenseSection(license);
-const licenseLink = renderLicenseLink(license);
 
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = (answers) => {
@@ -54,6 +51,10 @@ const generateMarkdown = (answers) => {
     github,
     email,
   } = answers;
+
+  const licenseBadge = renderLicenseBadge(license);
+  const licenseSection = renderLicenseSection(license);
+  const licenseLink = renderLicenseLink(license);
 
   return `# ${title}
 
