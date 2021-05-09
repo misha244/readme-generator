@@ -86,9 +86,7 @@ const generateMarkdown = (answers) => {
 
   ## License
 
-  ${license}
   ${licenseSection}
-  ${licenseLink}
 
   ## Contributing
 
