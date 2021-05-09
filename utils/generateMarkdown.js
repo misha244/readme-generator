@@ -59,22 +59,21 @@ const generateMarkdown = (answers) => {
   const licenseBadge = renderLicenseBadge(license);
   const licenseSection = renderLicenseSection(license);
 
-  return `# ${title}
+  return `# ${title} ${licenseBadge}
 
-  ${licenseBadge}
 
   ## Description
 
   ${description}
 
   ## Table of Contents
-  - [Description](#description)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [License](#license)
-  - [Contributing](#contributing)
-  - [Tests](#tests)
-  - [Questions](#questions)
+  - [*Description*](#description)
+  - [*Installation*](#installation)
+  - [*Usage*](#usage)
+  - [*License*](#license)
+  - [*Contributing*](#contributing)
+  - [*Tests*](#tests)
+  - [*Questions*](#questions)
 
   ## Installation
 
